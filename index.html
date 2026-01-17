@@ -3,28 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SubClean — Контроль твоих подписок</title>
+    <title>SubClean — Твой менеджер подписок</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
 </head>
 <body>
     <div class="app-card">
         <div class="logo-area">
-            <div id="logo-placeholder">SC</div>
-            <h1>SubClean</h1>
+            <img src="assets/logo.png" alt="SubClean Logo" style="width: 100px; height: 100px; object-fit: contain; border-radius: 20px; margin-bottom: 10px;">
+            <h1>SubClean <span>v1.2</span></h1>
         </div>
         
         <div class="upload-box" id="dropZone">
-            <p>Загрузите скриншот чека или истории операций</p>
+            <p>Загрузи скриншот с подписками</p>
             <input type="file" id="fileInput" hidden accept="image/*">
             <button class="main-btn" onclick="document.getElementById('fileInput').click()">Выбрать файл</button>
         </div>
 
         <div id="results" class="results-list">
-            <h3 class="status-title">Статус: <span id="status">Ожидание файла</span></h3>
+            <h3 class="status-title">Статус: <span id="status">Готов к работе</span></h3>
             <ul id="subsList">
                 </ul>
         </div>
     </div>
+
     <script src="app.js"></script>
 </body>
 </html>
