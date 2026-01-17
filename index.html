@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SubClean — Контроль твоих подписок</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-card">
+        <div class="logo-area">
+            <div id="logo-placeholder">SC</div>
+            <h1>SubClean</h1>
+        </div>
+        
+        <div class="upload-box" id="dropZone">
+            <p>Загрузите скриншот чека или истории операций</p>
+            <input type="file" id="fileInput" hidden accept="image/*">
+            <button class="main-btn" onclick="document.getElementById('fileInput').click()">Выбрать файл</button>
+        </div>
+
+        <div id="results" class="results-list">
+            <h3 class="status-title">Статус: <span id="status">Ожидание файла</span></h3>
+            <ul id="subsList">
+                </ul>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
